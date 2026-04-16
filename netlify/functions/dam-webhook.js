@@ -24,17 +24,29 @@ async function getAccessToken() {
   return (await res.json()).access_token;
 }
 
-async function getAssetWithCaseNumber(assetId, token) {
+async function getAssetWithCaseNumber(assetId, token, assetType) {
+  // Try type-specific endpoint first (e.g. /raw-files/id), then generic /assets/id
+  const typeEndpoints = {
+    raw_file: "raw-files",
+    image: "images",
+    video: "videos",
+  };
+  const typePath = typeEndpoints[assetType];
+  const assetUrl = typePath
+    ? `${DAM_API}/${typePath}/${assetId}`
+    : `${DAM_API}/assets/${assetId}`;
+
   const [assetRes, fieldsRes] = await Promise.all([
-    fetch(`${DAM_API}/assets/${assetId}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    }),
+    fetch(assetUrl, { headers: { Authorization: `Bearer ${token}` } }),
     fetch(`${DAM_API}/assets/${assetId}/fields?page_size=100`, {
       headers: { Authorization: `Bearer ${token}` },
     }),
   ]);
 
-  const asset = assetRes.ok ? await assetRes.json() : null;
+  let asset = null;
+  if (assetRes.ok) {
+    try { asset = await assetRes.json(); } catch (e) {}
+  }
   const fieldsData = fieldsRes.ok ? await fieldsRes.json() : { data: [] };
   const fields = fieldsData.data || [];
 
@@ -172,7 +184,7 @@ export default async (req) => {
       if (!caseNumber && process.env.OPTIMIZELY_DAM_CLIENT_ID) {
         const token = await getAccessToken();
         if (token) {
-          const result = await getAssetWithCaseNumber(assetId, token);
+          const result = await getAssetWithCaseNumber(assetId, token, assetType);
           caseNumber = result.caseNumber;
           if (result.asset) {
             assetName = assetName || result.asset.title;
