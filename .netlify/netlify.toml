@@ -1,16 +1,15 @@
+functionsDirectory = "/Users/nunofigueiredo/Documents/demos/skretting-crm/netlify/functions"
+functionsDirectoryOrigin = "default"
 redirectsOrigin = "config"
 plugins = []
 headers = []
-
-[functions]
-
-[functions."*"]
 
 [build]
 publish = "/Users/nunofigueiredo/Documents/demos/skretting-crm/dist"
 publishOrigin = "config"
 commandOrigin = "config"
 command = "npm run build"
+functions = "/Users/nunofigueiredo/Documents/demos/skretting-crm/netlify/functions"
 
 [build.environment]
 
@@ -25,6 +24,10 @@ command = "npm run build"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]
 
 [[redirects]]
 from = "/*"
