@@ -146,18 +146,18 @@ export default async (req) => {
       // Log the raw payload for debugging
       console.log("Webhook received:", JSON.stringify(body));
 
-      // CMP webhook format: { event, payload: { id, ... } } or direct: { asset_id, ... }
-      const payload = body.payload || body;
-      let assetId = payload.asset_id || payload.id || payload.asset?.id;
-      let caseNumber = payload.case_number;
-      let assetName = payload.asset_name || payload.name || payload.title || payload.asset?.title;
-      let assetType = payload.asset_type || payload.type || payload.asset?.type;
-      let assetUrl = payload.asset_url;
-      let thumbnailUrl = payload.thumbnail_url || payload.asset?.thumbnail_url;
+      // CMP webhook format: { event_name, data: { asset: { id, type } } }
+      // Direct format: { asset_id, case_number, ... }
+      const cmpAsset = body.data?.asset;
+      let assetId = body.asset_id || cmpAsset?.id || body.id;
+      let caseNumber = body.case_number;
+      let assetName = body.asset_name || cmpAsset?.title || body.title;
+      let assetType = body.asset_type || cmpAsset?.type || body.type;
+      let assetUrl = body.asset_url;
+      let thumbnailUrl = body.thumbnail_url || cmpAsset?.thumbnail_url;
 
-      // If CMP sends the event type, log it
-      if (body.event) {
-        console.log("CMP event type:", body.event);
+      if (body.event_name) {
+        console.log("CMP event:", body.event_name, "asset:", assetId);
       }
 
       if (!assetId) {
