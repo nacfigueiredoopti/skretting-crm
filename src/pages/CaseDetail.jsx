@@ -168,11 +168,9 @@ export default function CaseDetail() {
             <span className="case-meta-item">
               <Tag size={14} /> {caseData.id}
             </span>
-            {caseData.caseNumber && (
-              <span className="case-meta-item">
-                <FileText size={14} /> NF-{caseData.caseNumber}
-              </span>
-            )}
+            <span className="case-meta-item">
+              <FileText size={14} /> NF-{caseData.id.replace("CAS-", "")}
+            </span>
             <span className="case-meta-item">
               <Calendar size={14} /> Created {caseData.created}
             </span>
@@ -252,12 +250,10 @@ export default function CaseDetail() {
               <span className="label">Assignee</span>
               <span className="value">{caseData.assignee}</span>
             </div>
-            {caseData.caseNumber && (
-              <div className="detail-row">
-                <span className="label">NF Case #</span>
-                <span className="value">{caseData.caseNumber}</span>
-              </div>
-            )}
+            <div className="detail-row">
+              <span className="label">NF Case #</span>
+              <span className="value">{caseData.id.replace("CAS-", "")}</span>
+            </div>
             <div className="detail-row">
               <span className="label">Created</span>
               <span className="value">{caseData.created}</span>
@@ -268,7 +264,7 @@ export default function CaseDetail() {
             </div>
           </div>
 
-          <DamAssets caseNumber={caseData.caseNumber} />
+          <DamAssets caseNumber={caseData.id.replace("CAS-", "")} />
 
           <div className="case-sidebar-card">
             <h4>Contact</h4>

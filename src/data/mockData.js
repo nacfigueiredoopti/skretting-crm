@@ -1,393 +1,259 @@
 export const contacts = [
-  {
-    id: 1,
-    name: "Lars Henriksen",
-    company: "Nordic Salmon AS",
-    email: "lars.henriksen@nordicsalmon.no",
-    phone: "+47 912 34 567",
-    role: "Head of Procurement",
-    region: "Norway",
-    status: "Active",
-    lastContact: "2026-04-14",
-    avatar: "LH",
-  },
-  {
-    id: 2,
-    name: "Maria Silva",
-    company: "AquaChile SpA",
-    email: "m.silva@aquachile.cl",
-    phone: "+56 9 8765 4321",
-    role: "Operations Manager",
-    region: "Chile",
-    status: "Active",
-    lastContact: "2026-04-12",
-    avatar: "MS",
-  },
-  {
-    id: 3,
-    name: "James McAllister",
-    company: "Scottish Sea Farms",
-    email: "j.mcallister@scottishseafarms.co.uk",
-    phone: "+44 7700 900123",
-    role: "Feed Manager",
-    region: "Scotland",
-    status: "Active",
-    lastContact: "2026-04-10",
-    avatar: "JM",
-  },
-  {
-    id: 4,
-    name: "Takeshi Yamamoto",
-    company: "Maruha Nichiro",
-    email: "t.yamamoto@maruha.co.jp",
-    phone: "+81 90-1234-5678",
-    role: "Technical Director",
-    region: "Japan",
-    status: "Prospect",
-    lastContact: "2026-04-08",
-    avatar: "TY",
-  },
-  {
-    id: 5,
-    name: "Anna Johansson",
-    company: "Lerøy Seafood Group",
-    email: "anna.johansson@leroy.no",
-    phone: "+47 923 45 678",
-    role: "Sustainability Lead",
-    region: "Norway",
-    status: "Active",
-    lastContact: "2026-04-15",
-    avatar: "AJ",
-  },
-  {
-    id: 6,
-    name: "Carlos Mendez",
-    company: "Salmones Camanchaca",
-    email: "c.mendez@camanchaca.cl",
-    phone: "+56 9 7654 3210",
-    role: "Purchasing Director",
-    region: "Chile",
-    status: "Inactive",
-    lastContact: "2026-03-20",
-    avatar: "CM",
-  },
-  {
-    id: 7,
-    name: "Fiona O'Brien",
-    company: "Mowi Ireland",
-    email: "f.obrien@mowi.ie",
-    phone: "+353 87 123 4567",
-    role: "Farm Manager",
-    region: "Ireland",
-    status: "Active",
-    lastContact: "2026-04-11",
-    avatar: "FO",
-  },
-  {
-    id: 8,
-    name: "Erik Dahl",
-    company: "SalMar ASA",
-    email: "erik.dahl@salmar.no",
-    phone: "+47 934 56 789",
-    role: "R&D Manager",
-    region: "Norway",
-    status: "Active",
-    lastContact: "2026-04-13",
-    avatar: "ED",
-  },
+  { id: 1, name: "Lars Henriksen", company: "Nordic Salmon AS", email: "lars.henriksen@nordicsalmon.no", phone: "+47 912 34 567", role: "Head of Procurement", region: "Norway", status: "Active", lastContact: "2026-04-14", avatar: "LH" },
+  { id: 2, name: "Maria Silva", company: "AquaChile SpA", email: "m.silva@aquachile.cl", phone: "+56 9 8765 4321", role: "Operations Manager", region: "Chile", status: "Active", lastContact: "2026-04-12", avatar: "MS" },
+  { id: 3, name: "James McAllister", company: "Scottish Sea Farms", email: "j.mcallister@scottishseafarms.co.uk", phone: "+44 7700 900123", role: "Feed Manager", region: "Scotland", status: "Active", lastContact: "2026-04-10", avatar: "JM" },
+  { id: 4, name: "Takeshi Yamamoto", company: "Maruha Nichiro", email: "t.yamamoto@maruha.co.jp", phone: "+81 90-1234-5678", role: "Technical Director", region: "Japan", status: "Prospect", lastContact: "2026-04-08", avatar: "TY" },
+  { id: 5, name: "Anna Johansson", company: "Lerøy Seafood Group", email: "anna.johansson@leroy.no", phone: "+47 923 45 678", role: "Sustainability Lead", region: "Norway", status: "Active", lastContact: "2026-04-15", avatar: "AJ" },
+  { id: 6, name: "Carlos Mendez", company: "Salmones Camanchaca", email: "c.mendez@camanchaca.cl", phone: "+56 9 7654 3210", role: "Purchasing Director", region: "Chile", status: "Inactive", lastContact: "2026-03-20", avatar: "CM" },
+  { id: 7, name: "Fiona O'Brien", company: "Mowi Ireland", email: "f.obrien@mowi.ie", phone: "+353 87 123 4567", role: "Farm Manager", region: "Ireland", status: "Active", lastContact: "2026-04-11", avatar: "FO" },
+  { id: 8, name: "Erik Dahl", company: "SalMar ASA", email: "erik.dahl@salmar.no", phone: "+47 934 56 789", role: "R&D Manager", region: "Norway", status: "Active", lastContact: "2026-04-13", avatar: "ED" },
+  { id: 9, name: "Sophie Laurent", company: "Mowi France", email: "s.laurent@mowi.fr", phone: "+33 6 12 34 56 78", role: "Quality Manager", region: "France", status: "Active", lastContact: "2026-04-09", avatar: "SL" },
+  { id: 10, name: "Henrik Nilsen", company: "Cermaq Norway", email: "h.nilsen@cermaq.no", phone: "+47 945 67 890", role: "Feed Coordinator", region: "Norway", status: "Active", lastContact: "2026-04-07", avatar: "HN" },
+  { id: 11, name: "Roberto Vargas", company: "Multiexport Foods", email: "r.vargas@multiexport.cl", phone: "+56 9 6543 2109", role: "Production Manager", region: "Chile", status: "Active", lastContact: "2026-04-06", avatar: "RV" },
+  { id: 12, name: "Karin Bergström", company: "BioMar Group", email: "k.bergstrom@biomar.com", phone: "+45 20 12 34 56", role: "R&D Director", region: "Denmark", status: "Prospect", lastContact: "2026-04-05", avatar: "KB" },
+  { id: 13, name: "David Thompson", company: "Cooke Aquaculture", email: "d.thompson@cookeaqua.com", phone: "+1 506 456 7890", role: "VP Operations", region: "Canada", status: "Active", lastContact: "2026-04-04", avatar: "DT" },
+  { id: 14, name: "Ingrid Haugen", company: "Grieg Seafood", email: "i.haugen@grframing.no", phone: "+47 956 78 901", role: "Sustainability Manager", region: "Norway", status: "Active", lastContact: "2026-04-03", avatar: "IH" },
+  { id: 15, name: "Pål Kristiansen", company: "NRS Farming", email: "p.kristiansen@nrs.no", phone: "+47 967 89 012", role: "Technical Manager", region: "Norway", status: "Active", lastContact: "2026-04-02", avatar: "PK" },
 ];
 
-export const cases = [
+// ── Detailed cases (the original 8 with rich notes) ──
+
+const detailedCases = [
   {
-    id: "CAS-2026-001",
-    caseNumber: "24778",
+    id: "CAS-24778",
     title: "Feed conversion ratio optimization — Nordic Salmon",
-    contact: contacts[0],
-    status: "Open",
-    priority: "High",
-    category: "Technical Support",
-    created: "2026-04-10",
-    updated: "2026-04-14",
-    description:
-      "Nordic Salmon AS reports lower than expected FCR on their Atlantic salmon grow-out pens (sites 4-7). Current FCR at 1.28 vs target 1.15. Feed: MicroBalance 200. Requesting on-site technical visit and feed formulation review.",
+    contact: contacts[0], status: "Open", priority: "High", category: "Technical Support",
+    created: "2026-04-10", updated: "2026-04-14",
+    description: "Nordic Salmon AS reports lower than expected FCR on their Atlantic salmon grow-out pens (sites 4-7). Current FCR at 1.28 vs target 1.15. Feed: MicroBalance 200. Requesting on-site technical visit and feed formulation review.",
     assignee: "Ingrid Solberg",
     notes: [
-      {
-        id: 1,
-        author: "Ingrid Solberg",
-        date: "2026-04-10T09:30:00",
-        text: "Received request from Lars. Scheduled initial call for April 11. Will review historical feeding data and water temperature logs before the call.",
-      },
-      {
-        id: 2,
-        author: "Ingrid Solberg",
-        date: "2026-04-11T14:15:00",
-        text: "Call completed with Lars and their farm manager. FCR deviation started ~3 weeks ago. Coincides with water temp drop to 7°C. Recommended adjusting feeding regime to compensate. Sending updated feeding tables.",
-      },
-      {
-        id: 3,
-        author: "Dr. Henrik Aas",
-        date: "2026-04-12T10:00:00",
-        text: "Reviewed pellet samples from batch NB-2026-0389. Lab results normal — protein 42%, fat 28%, moisture 6.2%. No quality issues detected. FCR issue likely environmental/management related.",
-      },
-      {
-        id: 4,
-        author: "Ingrid Solberg",
-        date: "2026-04-14T08:45:00",
-        text: "On-site visit confirmed. Scheduled for April 18. Will bring portable feed analysis kit and review pen-level feeding data. Lars confirmed access to all 4 sites.",
-      },
+      { id: 1, author: "Ingrid Solberg", date: "2026-04-10T09:30:00", text: "Received request from Lars. Scheduled initial call for April 11. Will review historical feeding data and water temperature logs before the call." },
+      { id: 2, author: "Ingrid Solberg", date: "2026-04-11T14:15:00", text: "Call completed with Lars and their farm manager. FCR deviation started ~3 weeks ago. Coincides with water temp drop to 7°C. Recommended adjusting feeding regime to compensate. Sending updated feeding tables." },
+      { id: 3, author: "Dr. Henrik Aas", date: "2026-04-12T10:00:00", text: "Reviewed pellet samples from batch NB-2026-0389. Lab results normal — protein 42%, fat 28%, moisture 6.2%. No quality issues detected. FCR issue likely environmental/management related." },
+      { id: 4, author: "Ingrid Solberg", date: "2026-04-14T08:45:00", text: "On-site visit confirmed. Scheduled for April 18. Will bring portable feed analysis kit and review pen-level feeding data. Lars confirmed access to all 4 sites." },
     ],
   },
   {
-    id: "CAS-2026-002",
-    caseNumber: "24779",
+    id: "CAS-24779",
     title: "MicroBalance 200 delivery delay — AquaChile",
-    contact: contacts[1],
-    status: "In Progress",
-    priority: "Critical",
-    category: "Logistics",
-    created: "2026-04-08",
-    updated: "2026-04-12",
-    description:
-      "Shipment of 240 tonnes MicroBalance 200 (PO #AC-78432) delayed at Valparaíso port. Originally scheduled for April 5 delivery. Customer running low on feed stock — estimated 5 days remaining. Urgent resolution required.",
+    contact: contacts[1], status: "In Progress", priority: "Critical", category: "Logistics",
+    created: "2026-04-08", updated: "2026-04-12",
+    description: "Shipment of 240 tonnes MicroBalance 200 (PO #AC-78432) delayed at Valparaíso port. Originally scheduled for April 5 delivery. Customer running low on feed stock — estimated 5 days remaining. Urgent resolution required.",
     assignee: "Pedro Gutierrez",
     notes: [
-      {
-        id: 1,
-        author: "Pedro Gutierrez",
-        date: "2026-04-08T11:00:00",
-        text: "Maria called — very concerned about stock levels. Contacted logistics team. Shipment held at customs due to updated phytosanitary documentation requirements from SAG.",
-      },
-      {
-        id: 2,
-        author: "Pedro Gutierrez",
-        date: "2026-04-09T16:30:00",
-        text: "Submitted updated documentation to SAG. Processing time 24-48 hours. Arranged emergency stock of 60 tonnes from our Osorno warehouse to bridge the gap. Trucking scheduled for April 10.",
-      },
-      {
-        id: 3,
-        author: "Maria Silva",
-        date: "2026-04-10T09:15:00",
-        text: "Customer confirmed receipt of 60t emergency stock. Appreciated fast response. Still needs main shipment ASAP — grow-out phase is critical.",
-      },
-      {
-        id: 4,
-        author: "Pedro Gutierrez",
-        date: "2026-04-12T14:00:00",
-        text: "SAG clearance received. Shipment released from port. ETA to AquaChile facility: April 14. Maria notified and confirmed receiving dock availability.",
-      },
+      { id: 1, author: "Pedro Gutierrez", date: "2026-04-08T11:00:00", text: "Maria called — very concerned about stock levels. Contacted logistics team. Shipment held at customs due to updated phytosanitary documentation requirements from SAG." },
+      { id: 2, author: "Pedro Gutierrez", date: "2026-04-09T16:30:00", text: "Submitted updated documentation to SAG. Processing time 24-48 hours. Arranged emergency stock of 60 tonnes from our Osorno warehouse to bridge the gap. Trucking scheduled for April 10." },
+      { id: 3, author: "Maria Silva", date: "2026-04-10T09:15:00", text: "Customer confirmed receipt of 60t emergency stock. Appreciated fast response. Still needs main shipment ASAP — grow-out phase is critical." },
+      { id: 4, author: "Pedro Gutierrez", date: "2026-04-12T14:00:00", text: "SAG clearance received. Shipment released from port. ETA to AquaChile facility: April 14. Maria notified and confirmed receiving dock availability." },
     ],
   },
   {
-    id: "CAS-2026-003",
-    caseNumber: "24780",
+    id: "CAS-24780",
     title: "Transition to Protec health feed — Scottish Sea Farms",
-    contact: contacts[2],
-    status: "Open",
-    priority: "Medium",
-    category: "Product Consultation",
-    created: "2026-04-05",
-    updated: "2026-04-10",
-    description:
-      "Scottish Sea Farms interested in transitioning 3 sites from competitor feed to Skretting Protec range for their pre-smolt and early sea phase. Need trial plan, pricing proposal, and transition feeding protocol.",
+    contact: contacts[2], status: "Open", priority: "Medium", category: "Product Consultation",
+    created: "2026-04-05", updated: "2026-04-10",
+    description: "Scottish Sea Farms interested in transitioning 3 sites from competitor feed to Skretting Protec range for their pre-smolt and early sea phase. Need trial plan, pricing proposal, and transition feeding protocol.",
     assignee: "Claire Watson",
     notes: [
-      {
-        id: 1,
-        author: "Claire Watson",
-        date: "2026-04-05T10:30:00",
-        text: "Met James at Aquaculture UK conference. Strong interest in Protec after seeing our AGD trial results. He wants to trial on one site first (Loch Nevis) before rolling out.",
-      },
-      {
-        id: 2,
-        author: "Claire Watson",
-        date: "2026-04-07T15:00:00",
-        text: "Sent Protec product portfolio and transition protocol document. Included case studies from Mowi Scotland sites showing 15% reduction in AGD-related mortality.",
-      },
-      {
-        id: 3,
-        author: "Claire Watson",
-        date: "2026-04-10T11:45:00",
-        text: "James reviewed proposal. Requesting pricing for 500t trial order. Also wants to discuss functional feed options for sea lice management. Setting up call with our health team for April 15.",
-      },
+      { id: 1, author: "Claire Watson", date: "2026-04-05T10:30:00", text: "Met James at Aquaculture UK conference. Strong interest in Protec after seeing our AGD trial results. He wants to trial on one site first (Loch Nevis) before rolling out." },
+      { id: 2, author: "Claire Watson", date: "2026-04-07T15:00:00", text: "Sent Protec product portfolio and transition protocol document. Included case studies from Mowi Scotland sites showing 15% reduction in AGD-related mortality." },
+      { id: 3, author: "Claire Watson", date: "2026-04-10T11:45:00", text: "James reviewed proposal. Requesting pricing for 500t trial order. Also wants to discuss functional feed options for sea lice management. Setting up call with our health team for April 15." },
     ],
   },
   {
-    id: "CAS-2026-004",
-    caseNumber: "24781",
+    id: "CAS-24781",
     title: "Shrimp feed formulation inquiry — Maruha Nichiro",
-    contact: contacts[3],
-    status: "Open",
-    priority: "Medium",
-    category: "New Business",
-    created: "2026-04-02",
-    updated: "2026-04-08",
-    description:
-      "Maruha Nichiro exploring partnership for their new vannamei shrimp operation in Vietnam. Looking for high-performance grow-out and finishing feeds. Annual volume estimate: 5,000 tonnes.",
+    contact: contacts[3], status: "Open", priority: "Medium", category: "New Business",
+    created: "2026-04-02", updated: "2026-04-08",
+    description: "Maruha Nichiro exploring partnership for their new vannamei shrimp operation in Vietnam. Looking for high-performance grow-out and finishing feeds. Annual volume estimate: 5,000 tonnes.",
     assignee: "Ken Tanaka",
     notes: [
-      {
-        id: 1,
-        author: "Ken Tanaka",
-        date: "2026-04-02T08:00:00",
-        text: "Initial inquiry received through our Tokyo office. Takeshi is leading the feed sourcing for their new 200-hectare shrimp farm in Khánh Hòa province. First production cycle Q3 2026.",
-      },
-      {
-        id: 2,
-        author: "Ken Tanaka",
-        date: "2026-04-05T13:30:00",
-        text: "Presented our Lorica and Vitalis shrimp feed ranges via video call. Takeshi impressed with our gut health approach. Requested technical data sheets and references from existing Vietnam operations.",
-      },
-      {
-        id: 3,
-        author: "Ken Tanaka",
-        date: "2026-04-08T10:00:00",
-        text: "Sent comprehensive proposal with product specs, pricing tiers, and logistics plan (supply from our Long An factory). Arranged reference visit to CP Foods site using our feeds. Takeshi to confirm visit date.",
-      },
+      { id: 1, author: "Ken Tanaka", date: "2026-04-02T08:00:00", text: "Initial inquiry received through our Tokyo office. Takeshi is leading the feed sourcing for their new 200-hectare shrimp farm in Khánh Hòa province. First production cycle Q3 2026." },
+      { id: 2, author: "Ken Tanaka", date: "2026-04-05T13:30:00", text: "Presented our Lorica and Vitalis shrimp feed ranges via video call. Takeshi impressed with our gut health approach. Requested technical data sheets and references from existing Vietnam operations." },
+      { id: 3, author: "Ken Tanaka", date: "2026-04-08T10:00:00", text: "Sent comprehensive proposal with product specs, pricing tiers, and logistics plan (supply from our Long An factory). Arranged reference visit to CP Foods site using our feeds. Takeshi to confirm visit date." },
     ],
   },
   {
-    id: "CAS-2026-005",
-    caseNumber: "24782",
+    id: "CAS-24782",
     title: "Sustainability certification support — Lerøy Seafood",
-    contact: contacts[4],
-    status: "In Progress",
-    priority: "High",
-    category: "Sustainability",
-    created: "2026-03-28",
-    updated: "2026-04-15",
-    description:
-      "Lerøy Seafood pursuing ASC certification renewal for 12 sites. Need updated feed sustainability documentation including marine ingredient sourcing, carbon footprint data, and soy traceability certificates for all Skretting products supplied in 2025-2026.",
+    contact: contacts[4], status: "In Progress", priority: "High", category: "Sustainability",
+    created: "2026-03-28", updated: "2026-04-15",
+    description: "Lerøy Seafood pursuing ASC certification renewal for 12 sites. Need updated feed sustainability documentation including marine ingredient sourcing, carbon footprint data, and soy traceability certificates for all Skretting products supplied in 2025-2026.",
     assignee: "Ingrid Solberg",
     notes: [
-      {
-        id: 1,
-        author: "Ingrid Solberg",
-        date: "2026-03-28T09:00:00",
-        text: "Anna needs full sustainability documentation package for ASC audit scheduled May 15. Contacted our sustainability team in Stavanger to compile data.",
-      },
-      {
-        id: 2,
-        author: "Dr. Marit Olsen",
-        date: "2026-04-02T14:30:00",
-        text: "Compiled marine ingredient sourcing data — all fishmeal from IFFO RS certified sources. Forage Fish Dependency Ratio: 0.87 (salmon), well within ASC threshold. Report attached.",
-      },
-      {
-        id: 3,
-        author: "Ingrid Solberg",
-        date: "2026-04-10T16:00:00",
-        text: "Sent carbon footprint report (Scope 1-3) for all products supplied to Lerøy in 2025. CFP per kg feed: 2.1 kg CO2e, down 8% from previous year. Anna pleased with improvement trajectory.",
-      },
-      {
-        id: 4,
-        author: "Ingrid Solberg",
-        date: "2026-04-15T11:30:00",
-        text: "Soy traceability certificates received from ProTerra. All soy sourced from certified deforestation-free supply chains. Full documentation package sent to Anna. She confirmed everything looks complete for the audit.",
-      },
+      { id: 1, author: "Ingrid Solberg", date: "2026-03-28T09:00:00", text: "Anna needs full sustainability documentation package for ASC audit scheduled May 15. Contacted our sustainability team in Stavanger to compile data." },
+      { id: 2, author: "Dr. Marit Olsen", date: "2026-04-02T14:30:00", text: "Compiled marine ingredient sourcing data — all fishmeal from IFFO RS certified sources. Forage Fish Dependency Ratio: 0.87 (salmon), well within ASC threshold. Report attached." },
+      { id: 3, author: "Ingrid Solberg", date: "2026-04-10T16:00:00", text: "Sent carbon footprint report (Scope 1-3) for all products supplied to Lerøy in 2025. CFP per kg feed: 2.1 kg CO2e, down 8% from previous year. Anna pleased with improvement trajectory." },
+      { id: 4, author: "Ingrid Solberg", date: "2026-04-15T11:30:00", text: "Soy traceability certificates received from ProTerra. All soy sourced from certified deforestation-free supply chains. Full documentation package sent to Anna. She confirmed everything looks complete for the audit." },
     ],
   },
   {
-    id: "CAS-2026-006",
-    caseNumber: "24783",
+    id: "CAS-24783",
     title: "Feed pellet quality complaint — Salmones Camanchaca",
-    contact: contacts[5],
-    status: "Resolved",
-    priority: "High",
-    category: "Quality",
-    created: "2026-03-15",
-    updated: "2026-03-25",
-    description:
-      "Camanchaca reported excessive dust and broken pellets in last 3 deliveries of OptiLine 9mm. Affecting feeding efficiency and causing waste. Batch numbers: OL-2026-0201, 0215, 0228.",
+    contact: contacts[5], status: "Resolved", priority: "High", category: "Quality",
+    created: "2026-03-15", updated: "2026-03-25",
+    description: "Camanchaca reported excessive dust and broken pellets in last 3 deliveries of OptiLine 9mm. Affecting feeding efficiency and causing waste. Batch numbers: OL-2026-0201, 0215, 0228.",
     assignee: "Pedro Gutierrez",
     notes: [
-      {
-        id: 1,
-        author: "Pedro Gutierrez",
-        date: "2026-03-15T10:00:00",
-        text: "Carlos reported 8-12% fines in recent OptiLine deliveries vs normal <3%. Requested retain samples from all 3 batches for lab analysis. Photos received showing visible quality issues.",
-      },
-      {
-        id: 2,
-        author: "Dr. Ana Rodriguez",
-        date: "2026-03-18T15:30:00",
-        text: "Lab analysis complete. Root cause identified: coating drum temperature variance during night shift production. Fat coating not properly absorbed, leading to surface cracking during transport. QC hold placed on similar batches.",
-      },
-      {
-        id: 3,
-        author: "Pedro Gutierrez",
-        date: "2026-03-20T09:00:00",
-        text: "Credit note issued for affected deliveries (total: 180 tonnes). Replacement shipment of 180t from new production run scheduled for March 24. Coating drum recalibrated and additional QC checkpoint added.",
-      },
-      {
-        id: 4,
-        author: "Pedro Gutierrez",
-        date: "2026-03-25T14:00:00",
-        text: "Replacement delivered. Carlos confirmed quality is back to standard. Fines measured at 1.8%. Case resolved. Follow-up quality review scheduled for next 3 deliveries as precaution.",
-      },
+      { id: 1, author: "Pedro Gutierrez", date: "2026-03-15T10:00:00", text: "Carlos reported 8-12% fines in recent OptiLine deliveries vs normal <3%. Requested retain samples from all 3 batches for lab analysis. Photos received showing visible quality issues." },
+      { id: 2, author: "Dr. Ana Rodriguez", date: "2026-03-18T15:30:00", text: "Lab analysis complete. Root cause identified: coating drum temperature variance during night shift production. Fat coating not properly absorbed, leading to surface cracking during transport. QC hold placed on similar batches." },
+      { id: 3, author: "Pedro Gutierrez", date: "2026-03-20T09:00:00", text: "Credit note issued for affected deliveries (total: 180 tonnes). Replacement shipment of 180t from new production run scheduled for March 24. Coating drum recalibrated and additional QC checkpoint added." },
+      { id: 4, author: "Pedro Gutierrez", date: "2026-03-25T14:00:00", text: "Replacement delivered. Carlos confirmed quality is back to standard. Fines measured at 1.8%. Case resolved. Follow-up quality review scheduled for next 3 deliveries as precaution." },
     ],
   },
   {
-    id: "CAS-2026-007",
-    caseNumber: "24784",
+    id: "CAS-24784",
     title: "Functional feed trial — Mowi Ireland",
-    contact: contacts[6],
-    status: "Open",
-    priority: "Low",
-    category: "R&D Collaboration",
-    created: "2026-04-11",
-    updated: "2026-04-11",
-    description:
-      "Mowi Ireland interested in running a controlled trial of our new CoolFeed product at their Bantry Bay site. CoolFeed designed to maintain appetite during high water temperature events (>18°C). Trial period: July-September 2026.",
+    contact: contacts[6], status: "Open", priority: "Low", category: "R&D Collaboration",
+    created: "2026-04-11", updated: "2026-04-11",
+    description: "Mowi Ireland interested in running a controlled trial of our new CoolFeed product at their Bantry Bay site. CoolFeed designed to maintain appetite during high water temperature events (>18°C). Trial period: July-September 2026.",
     assignee: "Claire Watson",
     notes: [
-      {
-        id: 1,
-        author: "Claire Watson",
-        date: "2026-04-11T13:00:00",
-        text: "Fiona reached out after reading our CoolFeed whitepaper. Bantry Bay site experienced significant appetite suppression last summer (water temps hit 19.5°C for 3 weeks). Perfect trial candidate. Drafting trial protocol with R&D team.",
-      },
+      { id: 1, author: "Claire Watson", date: "2026-04-11T13:00:00", text: "Fiona reached out after reading our CoolFeed whitepaper. Bantry Bay site experienced significant appetite suppression last summer (water temps hit 19.5°C for 3 weeks). Perfect trial candidate. Drafting trial protocol with R&D team." },
     ],
   },
   {
-    id: "CAS-2026-008",
-    caseNumber: "24785",
+    id: "CAS-24785",
     title: "Annual feed supply contract renewal — SalMar",
-    contact: contacts[7],
-    status: "In Progress",
-    priority: "Critical",
-    category: "Commercial",
-    created: "2026-04-01",
-    updated: "2026-04-13",
-    description:
-      "SalMar ASA annual feed supply contract (current value: NOK 850M) expires June 30, 2026. Renewal negotiations ongoing. SalMar requesting 3-year deal with volume-based pricing tiers and sustainability KPI-linked discounts.",
+    contact: contacts[7], status: "In Progress", priority: "Critical", category: "Commercial",
+    created: "2026-04-01", updated: "2026-04-13",
+    description: "SalMar ASA annual feed supply contract (current value: NOK 850M) expires June 30, 2026. Renewal negotiations ongoing. SalMar requesting 3-year deal with volume-based pricing tiers and sustainability KPI-linked discounts.",
     assignee: "Ingrid Solberg",
     notes: [
-      {
-        id: 1,
-        author: "Ingrid Solberg",
-        date: "2026-04-01T08:30:00",
-        text: "Kickoff meeting with Erik and SalMar procurement team. They want to consolidate from 2 suppliers to 1 (currently 60% Skretting / 40% competitor). Full volume would be ~45,000 tonnes annually.",
-      },
-      {
-        id: 2,
-        author: "Ingrid Solberg",
-        date: "2026-04-07T16:00:00",
-        text: "Presented 3-year proposal with tiered pricing: Tier 1 (>40k tonnes) gets 4% discount, Tier 2 (>35k) gets 2.5%. Included 1% additional discount linked to meeting joint sustainability targets (CFP reduction, FFDR). Erik to present to SalMar board.",
-      },
-      {
-        id: 3,
-        author: "Erik Dahl",
-        date: "2026-04-13T10:30:00",
-        text: "Board review positive but requesting adjustment on payment terms — want 60 days net instead of 30. Also asking for guaranteed R&D collaboration hours (200h/year) as part of the contract. Scheduling follow-up for April 20.",
-      },
+      { id: 1, author: "Ingrid Solberg", date: "2026-04-01T08:30:00", text: "Kickoff meeting with Erik and SalMar procurement team. They want to consolidate from 2 suppliers to 1 (currently 60% Skretting / 40% competitor). Full volume would be ~45,000 tonnes annually." },
+      { id: 2, author: "Ingrid Solberg", date: "2026-04-07T16:00:00", text: "Presented 3-year proposal with tiered pricing: Tier 1 (>40k tonnes) gets 4% discount, Tier 2 (>35k) gets 2.5%. Included 1% additional discount linked to meeting joint sustainability targets (CFP reduction, FFDR). Erik to present to SalMar board." },
+      { id: 3, author: "Erik Dahl", date: "2026-04-13T10:30:00", text: "Board review positive but requesting adjustment on payment terms — want 60 days net instead of 30. Also asking for guaranteed R&D collaboration hours (200h/year) as part of the contract. Scheduling follow-up for April 20." },
     ],
   },
 ];
 
+// ── Generate 92 more cases to reach 100 total ──
+
+const companies = [
+  "Nordic Salmon AS", "AquaChile SpA", "Scottish Sea Farms", "Maruha Nichiro",
+  "Lerøy Seafood Group", "Salmones Camanchaca", "Mowi Ireland", "SalMar ASA",
+  "Mowi France", "Cermaq Norway", "Multiexport Foods", "BioMar Group",
+  "Cooke Aquaculture", "Grieg Seafood", "NRS Farming", "Bakkafrost",
+  "Australis Seafoods", "Nova Sea", "Nordlaks", "Blumar SA",
+];
+
+const categories = [
+  "Technical Support", "Logistics", "Product Consultation", "New Business",
+  "Sustainability", "Quality", "R&D Collaboration", "Commercial",
+];
+
+const statuses = ["Open", "In Progress", "Resolved"];
+const priorities = ["Critical", "High", "Medium", "Low"];
+const assignees = ["Ingrid Solberg", "Pedro Gutierrez", "Claire Watson", "Ken Tanaka", "Dr. Marit Olsen"];
+
+const caseTitles = [
+  "FCR optimization review", "Pellet durability concern", "New product trial request",
+  "Delivery schedule adjustment", "Feed formulation change request", "Water quality impact assessment",
+  "Pigmentation feed inquiry", "Contract renewal discussion", "Seasonal feed plan review",
+  "Smolt transfer feed protocol", "Post-vaccination feeding regime", "AGD functional feed request",
+  "Broodstock nutrition plan", "Freshwater feed transition", "Feed storage best practices",
+  "Extruder specification review", "Feed wastage reduction plan", "Growth rate benchmarking",
+  "Feed cost optimization", "Alternative protein trial", "Omega-3 enrichment study",
+  "Gut health feed assessment", "Sea lice functional feed", "Temperature stress feed plan",
+  "Feed conversion benchmarking", "Pellet size transition plan", "Environmental impact report",
+  "Feed traceability audit", "Batch quality deviation", "Shipping damage claim",
+  "New site feed supply setup", "Multi-year volume agreement", "Emergency stock request",
+  "Feed label compliance check", "Custom formulation request", "Feeding table recalibration",
+  "Mortality investigation support", "Harvest preparation feed", "Low-oxygen stress feed",
+  "Delousing treatment recovery feed", "Winter feeding strategy", "Summer appetite management",
+  "Feed trial data analysis", "Competitor product comparison", "Raw material sourcing inquiry",
+  "Feed mill visit request", "Webinar follow-up", "Conference meeting notes",
+  "Price adjustment request", "Payment terms review", "Sustainability KPI alignment",
+  "Carbon footprint documentation", "ASC certification support", "BAP compliance review",
+  "GlobalGAP feed documentation", "Organic feed certification", "FFDR calculation request",
+  "Marine ingredient traceability", "Soy-free formulation inquiry", "Insect meal trial",
+  "Single-cell protein evaluation", "Algae-based feed request", "Microbiome analysis",
+  "Vaccine compatibility test", "Palatability enhancement", "Feed dust reduction",
+  "Coating quality improvement", "Pellet sinking rate adjustment", "Feed color consistency",
+  "Packaging specification change", "Logistics route optimization", "Port clearance issue",
+  "Customs documentation update", "Phytosanitary certificate renewal", "Cold chain verification",
+  "Warehouse capacity planning", "Delivery frequency adjustment", "Emergency air freight",
+  "Container damage report", "Invoice discrepancy", "Credit note request",
+  "Volume forecast update", "Budget planning support", "Quarterly review preparation",
+  "Technical seminar request", "R&D collaboration proposal", "Joint publication review",
+  "Student internship feed trial", "PhD research partnership", "Innovation workshop follow-up",
+  "Digital feeding system integration", "Sensor-based feed monitoring", "AI feeding optimization pilot",
+];
+
+const descriptions = [
+  "Customer requesting technical review and on-site support for current feeding program.",
+  "Delivery timing needs adjustment to match production cycle changes at customer facility.",
+  "Inquiry about transitioning to our premium product range for improved performance.",
+  "Quality concern raised on recent batch — requesting lab analysis and corrective action.",
+  "Sustainability documentation required for upcoming certification audit.",
+  "New business opportunity identified — customer evaluating feed suppliers for upcoming expansion.",
+  "Contract discussion for upcoming renewal period — customer seeking improved terms.",
+  "R&D collaboration proposed for field trial of new product under development.",
+  "Logistics issue impacting supply reliability — requires immediate coordination.",
+  "Technical consultation requested for optimizing feeding strategy during challenging conditions.",
+];
+
+function seededRandom(seed) {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return s / 2147483647;
+  };
+}
+
+const generatedCases = [];
+const startNum = 24786;
+const rand = seededRandom(42);
+
+for (let i = 0; i < 92; i++) {
+  const caseNum = startNum + i;
+  const companyIdx = Math.floor(rand() * companies.length);
+  const contactIdx = Math.floor(rand() * contacts.length);
+  const titleIdx = Math.floor(rand() * caseTitles.length);
+  const catIdx = Math.floor(rand() * categories.length);
+  const statusIdx = Math.floor(rand() * statuses.length);
+  const prioIdx = Math.floor(rand() * priorities.length);
+  const assigneeIdx = Math.floor(rand() * assignees.length);
+  const descIdx = Math.floor(rand() * descriptions.length);
+
+  const day = String(1 + Math.floor(rand() * 28)).padStart(2, "0");
+  const month = rand() > 0.5 ? "04" : "03";
+  const created = `2026-${month}-${day}`;
+  const updDay = String(Math.min(28, parseInt(day) + Math.floor(rand() * 10))).padStart(2, "0");
+  const updated = `2026-04-${updDay}`;
+
+  const noteCount = 1 + Math.floor(rand() * 3);
+  const notes = [];
+  for (let n = 0; n < noteCount; n++) {
+    notes.push({
+      id: n + 1,
+      author: assignees[Math.floor(rand() * assignees.length)],
+      date: `2026-04-${String(1 + Math.floor(rand() * 15)).padStart(2, "0")}T${String(8 + Math.floor(rand() * 10)).padStart(2, "0")}:${String(Math.floor(rand() * 60)).padStart(2, "0")}:00`,
+      text: `Follow-up on ${caseTitles[titleIdx].toLowerCase()} for ${companies[companyIdx]}. ${["Awaiting customer response.", "Scheduled next review.", "Sent documentation.", "Internal review in progress.", "Action items assigned."][Math.floor(rand() * 5)]}`,
+    });
+  }
+
+  generatedCases.push({
+    id: `CAS-${caseNum}`,
+    title: `${caseTitles[titleIdx]} — ${companies[companyIdx]}`,
+    contact: contacts[contactIdx],
+    status: statuses[statusIdx],
+    priority: priorities[prioIdx],
+    category: categories[catIdx],
+    created,
+    updated,
+    description: `${descriptions[descIdx]} Company: ${companies[companyIdx]}.`,
+    assignee: assignees[assigneeIdx],
+    notes,
+  });
+}
+
+export const cases = [...detailedCases, ...generatedCases];
+
 export const dashboardStats = {
-  openCases: 5,
-  criticalCases: 2,
-  resolvedThisMonth: 3,
+  openCases: cases.filter((c) => c.status === "Open").length,
+  criticalCases: cases.filter((c) => c.priority === "Critical").length,
+  resolvedThisMonth: cases.filter((c) => c.status === "Resolved").length,
   avgResolutionDays: 8.5,
   activeContacts: 6,
   revenueAtRisk: "NOK 1.2B",
@@ -396,40 +262,10 @@ export const dashboardStats = {
 };
 
 export const recentActivity = [
-  {
-    id: 1,
-    type: "note",
-    text: "Ingrid Solberg added a note to CAS-2026-005",
-    time: "2 hours ago",
-  },
-  {
-    id: 2,
-    type: "case",
-    text: "CAS-2026-002 status changed to In Progress",
-    time: "4 hours ago",
-  },
-  {
-    id: 3,
-    type: "contact",
-    text: "New prospect added: Takeshi Yamamoto (Maruha Nichiro)",
-    time: "Yesterday",
-  },
-  {
-    id: 4,
-    type: "case",
-    text: "CAS-2026-006 resolved — quality complaint closed",
-    time: "Yesterday",
-  },
-  {
-    id: 5,
-    type: "note",
-    text: "Claire Watson added a note to CAS-2026-003",
-    time: "2 days ago",
-  },
-  {
-    id: 6,
-    type: "case",
-    text: "CAS-2026-007 created — Mowi Ireland CoolFeed trial",
-    time: "3 days ago",
-  },
+  { id: 1, type: "note", text: "Ingrid Solberg added a note to CAS-24782", time: "2 hours ago" },
+  { id: 2, type: "case", text: "CAS-24779 status changed to In Progress", time: "4 hours ago" },
+  { id: 3, type: "contact", text: "New prospect added: Takeshi Yamamoto (Maruha Nichiro)", time: "Yesterday" },
+  { id: 4, type: "case", text: "CAS-24783 resolved — quality complaint closed", time: "Yesterday" },
+  { id: 5, type: "note", text: "Claire Watson added a note to CAS-24780", time: "2 days ago" },
+  { id: 6, type: "case", text: "CAS-24784 created — Mowi Ireland CoolFeed trial", time: "3 days ago" },
 ];
