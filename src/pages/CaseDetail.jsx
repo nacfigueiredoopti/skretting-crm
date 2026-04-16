@@ -1,7 +1,116 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Calendar, User, Tag, Clock } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  User,
+  Tag,
+  Clock,
+  FileText,
+  Image,
+  Film,
+  File,
+  ExternalLink,
+  Loader2,
+  CloudOff,
+} from "lucide-react";
 import { cases } from "../data/mockData";
+
+const ASSET_TYPE_ICONS = {
+  image: Image,
+  video: Film,
+  raw_file: File,
+  article: FileText,
+  structured_content: FileText,
+};
+
+function DamAssets({ caseNumber }) {
+  const [assets, setAssets] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!caseNumber) {
+      setLoading(false);
+      return;
+    }
+
+    const fetchAssets = async () => {
+      try {
+        const res = await fetch(
+          `/.netlify/functions/dam-assets?case_number=${encodeURIComponent(caseNumber)}`
+        );
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Failed to fetch");
+        setAssets(data.assets || []);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAssets();
+  }, [caseNumber]);
+
+  if (loading) {
+    return (
+      <div className="case-sidebar-card">
+        <h4>DAM Assets</h4>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 0", fontSize: 13, color: "#6b7280" }}>
+          <Loader2 size={16} className="spin" /> Searching Optimizely DAM...
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="case-sidebar-card">
+        <h4>DAM Assets</h4>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 0", fontSize: 13, color: "#9ca3af" }}>
+          <CloudOff size={16} /> DAM not connected
+        </div>
+        <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 4 }}>
+          Configure OPTIMIZELY_DAM_CLIENT_ID and OPTIMIZELY_DAM_CLIENT_SECRET in Netlify environment variables.
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="case-sidebar-card">
+      <h4>DAM Assets ({assets.length})</h4>
+      {assets.length === 0 ? (
+        <div style={{ fontSize: 13, color: "#9ca3af", padding: "8px 0" }}>
+          No assets linked to case #{caseNumber}
+        </div>
+      ) : (
+        assets.map((asset) => {
+          const Icon = ASSET_TYPE_ICONS[asset.type] || File;
+          return (
+            <a
+              key={asset.id}
+              href={asset.dam_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dam-asset-item"
+            >
+              <div className="dam-asset-icon">
+                <Icon size={18} />
+              </div>
+              <div className="dam-asset-info">
+                <div className="dam-asset-name">{asset.name}</div>
+                <div className="dam-asset-type">{asset.type?.replace("_", " ")}</div>
+              </div>
+              <ExternalLink size={14} style={{ color: "#9ca3af", flexShrink: 0 }} />
+            </a>
+          );
+        })
+      )}
+    </div>
+  );
+}
 
 export default function CaseDetail() {
   const { id } = useParams();
@@ -59,6 +168,11 @@ export default function CaseDetail() {
             <span className="case-meta-item">
               <Tag size={14} /> {caseData.id}
             </span>
+            {caseData.caseNumber && (
+              <span className="case-meta-item">
+                <FileText size={14} /> NF-{caseData.caseNumber}
+              </span>
+            )}
             <span className="case-meta-item">
               <Calendar size={14} /> Created {caseData.created}
             </span>
@@ -138,6 +252,12 @@ export default function CaseDetail() {
               <span className="label">Assignee</span>
               <span className="value">{caseData.assignee}</span>
             </div>
+            {caseData.caseNumber && (
+              <div className="detail-row">
+                <span className="label">NF Case #</span>
+                <span className="value">{caseData.caseNumber}</span>
+              </div>
+            )}
             <div className="detail-row">
               <span className="label">Created</span>
               <span className="value">{caseData.created}</span>
@@ -147,6 +267,8 @@ export default function CaseDetail() {
               <span className="value">{caseData.updated}</span>
             </div>
           </div>
+
+          <DamAssets caseNumber={caseData.caseNumber} />
 
           <div className="case-sidebar-card">
             <h4>Contact</h4>

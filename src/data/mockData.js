@@ -100,6 +100,7 @@ export const contacts = [
 export const cases = [
   {
     id: "CAS-2026-001",
+    caseNumber: "24778",
     title: "Feed conversion ratio optimization — Nordic Salmon",
     contact: contacts[0],
     status: "Open",
@@ -139,6 +140,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-002",
+    caseNumber: "24779",
     title: "MicroBalance 200 delivery delay — AquaChile",
     contact: contacts[1],
     status: "In Progress",
@@ -178,6 +180,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-003",
+    caseNumber: "24780",
     title: "Transition to Protec health feed — Scottish Sea Farms",
     contact: contacts[2],
     status: "Open",
@@ -211,6 +214,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-004",
+    caseNumber: "24781",
     title: "Shrimp feed formulation inquiry — Maruha Nichiro",
     contact: contacts[3],
     status: "Open",
@@ -244,6 +248,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-005",
+    caseNumber: "24782",
     title: "Sustainability certification support — Lerøy Seafood",
     contact: contacts[4],
     status: "In Progress",
@@ -283,6 +288,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-006",
+    caseNumber: "24783",
     title: "Feed pellet quality complaint — Salmones Camanchaca",
     contact: contacts[5],
     status: "Resolved",
@@ -322,6 +328,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-007",
+    caseNumber: "24784",
     title: "Functional feed trial — Mowi Ireland",
     contact: contacts[6],
     status: "Open",
@@ -343,6 +350,7 @@ export const cases = [
   },
   {
     id: "CAS-2026-008",
+    caseNumber: "24785",
     title: "Annual feed supply contract renewal — SalMar",
     contact: contacts[7],
     status: "In Progress",

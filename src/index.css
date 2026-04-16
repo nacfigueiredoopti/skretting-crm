@@ -865,6 +865,64 @@ tbody tr:hover {
   margin-top: 12px;
 }
 
+/* DAM Assets */
+.dam-asset-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin: 4px -12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.1s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dam-asset-item:hover {
+  background: var(--skretting-gray-50);
+}
+
+.dam-asset-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--skretting-blue-light);
+  color: var(--skretting-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dam-asset-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dam-asset-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--skretting-gray-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dam-asset-type {
+  font-size: 11px;
+  color: var(--skretting-gray-400);
+  text-transform: capitalize;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
   .stats-grid {
