@@ -143,16 +143,27 @@ export default async (req) => {
     try {
       const body = await req.json();
 
-      let assetId = body.asset_id || body.id;
-      let caseNumber = body.case_number;
-      let assetName = body.asset_name || body.name || body.title;
-      let assetType = body.asset_type || body.type;
-      let assetUrl = body.asset_url;
-      let thumbnailUrl = body.thumbnail_url;
+      // Log the raw payload for debugging
+      console.log("Webhook received:", JSON.stringify(body));
+
+      // CMP webhook format: { event, payload: { id, ... } } or direct: { asset_id, ... }
+      const payload = body.payload || body;
+      let assetId = payload.asset_id || payload.id || payload.asset?.id;
+      let caseNumber = payload.case_number;
+      let assetName = payload.asset_name || payload.name || payload.title || payload.asset?.title;
+      let assetType = payload.asset_type || payload.type || payload.asset?.type;
+      let assetUrl = payload.asset_url;
+      let thumbnailUrl = payload.thumbnail_url || payload.asset?.thumbnail_url;
+
+      // If CMP sends the event type, log it
+      if (body.event) {
+        console.log("CMP event type:", body.event);
+      }
 
       if (!assetId) {
+        console.log("No asset_id found in payload. Full body:", JSON.stringify(body));
         return new Response(
-          JSON.stringify({ error: "asset_id is required" }),
+          JSON.stringify({ error: "asset_id not found in payload", received: body }),
           { status: 400, headers: CORS }
         );
       }
