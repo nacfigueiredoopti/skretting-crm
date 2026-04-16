@@ -76,15 +76,19 @@ async function storeAssetLink({ assetId, caseNumber, assetName, assetType, asset
     existing = { assets: [] };
   }
 
-  if (!existing.assets.find((a) => a.id === assetId)) {
-    existing.assets.push({
-      id: assetId,
-      name: assetName || "Untitled Asset",
-      type: assetType || "raw_file",
-      thumbnail: thumbnailUrl || null,
-      dam_url: assetUrl || `https://app.cmp.optimizely.com/assets/${assetId}`,
-      linked_at: new Date().toISOString(),
-    });
+  const idx = existing.assets.findIndex((a) => a.id === assetId);
+  const entry = {
+    id: assetId,
+    name: assetName || "Untitled Asset",
+    type: assetType || "raw_file",
+    thumbnail: thumbnailUrl || null,
+    dam_url: assetUrl || `https://app.cmp.optimizely.com/assets/${assetId}`,
+    linked_at: new Date().toISOString(),
+  };
+  if (idx >= 0) {
+    existing.assets[idx] = entry;
+  } else {
+    existing.assets.push(entry);
   }
 
   await store.setJSON(`case-${caseNumber}`, {
@@ -192,6 +196,7 @@ export default async (req) => {
             thumbnailUrl = thumbnailUrl || result.asset.thumbnail_url;
             assetUrl =
               assetUrl ||
+              result.asset.url ||
               result.asset.content?.value ||
               `https://app.cmp.optimizely.com/assets/${assetId}`;
           }
